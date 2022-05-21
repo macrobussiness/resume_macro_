@@ -1,0 +1,28 @@
+服务器配置：ubuntu
+	macro:
+	47.97.70.162	
+	macro_139_Algo
+	
+	jiang:
+	47.98.20.151
+	macro_1416_Algo
+	
+	hai:
+	47.97.101.238
+	macro_1525_Algo
+
+================================将各种组件分担部署到多个机器
+ubuntu:	
+	sudo update-alternatives --config java //java多版本切换
+	sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_191/bin/java 300  //300？
+	
+	systemctl enable redis-server //系统软连接
+	
+	ps -aux | grep redis
+	lsof -i:6379
+	
+	netstat -ltn //查看端口
+	ufw enable / disable / status
+	
+	
+	
